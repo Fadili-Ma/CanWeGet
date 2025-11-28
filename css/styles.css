@@ -1,0 +1,594 @@
+/* 
+ * Modern, Clean CSS Stylesheet for a Small Business Demo Website
+ * 
+ * --- Table of Contents ---
+ * 1. Variables & Base Styles
+ * 2. Typography
+ * 3. Layout & Container
+ * 4. Header & Navigation
+ * 5. Mobile Menu (Off-canvas)
+ * 6. Hero Section
+ * 7. Card Styles (for Deals/Services)
+ * 8. Footer
+ * 9. Utility Classes
+ * 10. Responsive Layout (Media Queries)
+ */
+
+/* 1. Variables & Base Styles */
+:root {
+    /* Color Palette */
+    --primary-color: #3F51B5; /* Indigo */
+    --accent-color: #FFC107; /* Amber */
+    --text-dark: #333;
+    --text-light: #666;
+    --bg-light: #f8f9fa;
+    --bg-dark: #212529;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0,0,0,0.08);
+    --shadow-medium: rgba(0,0,0,0.12);
+
+    /* Typography */
+    --font-family-primary: 'Inter', sans-serif; /* Requires @import 'Inter' from Google Fonts */
+    --font-size-base: 1rem;
+    --line-height-base: 1.6;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+}
+
+/* Reset Box Model */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--text-dark);
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 2. Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--spacing-xs);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-dark);
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #303F9F; /* Slightly darker primary */
+}
+
+ul {
+    list-style: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+}
+.btn:hover {
+    background-color: #FFD54F; /* Lighter amber */
+    transform: translateY(-2px);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.btn-primary:hover {
+    background-color: #303F9F; /* Darker primary */
+}
+
+/* 3. Layout & Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+section {
+    padding: var(--spacing-xxl) 0; /* Standard section padding */
+}
+
+main {
+    flex-grow: 1; /* Allows main content to fill available space */
+}
+
+/* 4. Header & Navigation */
+.header {
+    background-color: var(--white);
+    padding: var(--spacing-sm) 0;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-menu li a {
+    color: var(--text-dark);
+    font-weight: 600;
+    padding: var(--spacing-xs) 0;
+    position: relative;
+    display: block;
+}
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.nav-menu li a:hover::after,
+.nav-menu li a.active::after {
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.8rem; /* Font Awesome icon size */
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    /* Example icon: <i class="fas fa-bars"></i> */
+}
+
+/* 5. Mobile Menu (Off-canvas) */
+.mobile-nav {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: -280px; /* Off-screen */
+    width: 280px;
+    height: 100%;
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: var(--spacing-lg);
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    flex-direction: column;
+}
+
+.mobile-nav.open {
+    left: 0;
+    display: flex; /* Show when open */
+}
+
+.mobile-nav .close-btn {
+    align-self: flex-end;
+    font-size: 2rem; /* Font Awesome icon size */
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: var(--spacing-sm);
+    /* Example icon: <i class="fas fa-times"></i> */
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.mobile-nav ul li a {
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: var(--spacing-xs) 0;
+    display: block;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.mobile-nav ul li:last-child a {
+    border-bottom: none;
+}
+.mobile-nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1050;
+    cursor: pointer;
+}
+.overlay.active {
+    display: block;
+}
+
+/* 6. Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://via.placeholder.com/1600x800/3F51B5/FFFFFF?text=Modern+Business+Hero') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh; /* Make sure it takes up enough vertical space */
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: var(--spacing-xs);
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: var(--spacing-lg);
+    color: rgba(255,255,255,0.9);
+}
+
+/* 7. Card Styles for Deals/Services */
+.cards-section {
+    background-color: var(--bg-light);
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    padding: var(--spacing-lg);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-medium);
+}
+
+.card-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    /* Example icon: <i class="fas fa-star"></i> */
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.card p {
+    color: var(--text-light);
+    line-height: 1.5;
+    flex-grow: 1; /* Allows paragraph to take available space */
+}
+
+.card .btn {
+    margin-top: var(--spacing-md);
+    width: 100%;
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+/* 8. Footer */
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--white);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: center;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.footer-nav ul li a {
+    color: var(--white);
+    font-weight: 500;
+    position: relative;
+    display: block;
+}
+.footer-nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+.footer-nav ul li a:hover::after {
+    width: 100%;
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5em;
+    margin: 0 var(--spacing-xs);
+    transition: color 0.3s ease;
+    /* Example icons: <i class="fab fa-facebook-f"></i> */
+}
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.7);
+}
+
+
+/* 9. Utility Classes */
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+
+/* Margin Bottom */
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: var(--spacing-xs) !important; }
+.mb-2 { margin-bottom: var(--spacing-sm) !important; }
+.mb-3 { margin-bottom: var(--spacing-md) !important; }
+.mb-4 { margin-bottom: var(--spacing-lg) !important; }
+.mb-5 { margin-bottom: var(--spacing-xl) !important; }
+
+/* Margin Top */
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: var(--spacing-xs) !important; }
+.mt-2 { margin-top: var(--spacing-sm) !important; }
+.mt-3 { margin-top: var(--spacing-md) !important; }
+.mt-4 { margin-top: var(--spacing-lg) !important; }
+.mt-5 { margin-top: var(--spacing-xl) !important; }
+
+/* Padding Top */
+.pt-0 { padding-top: 0 !important; }
+.pt-1 { padding-top: var(--spacing-xs) !important; }
+.pt-2 { padding-top: var(--spacing-sm) !important; }
+.pt-3 { padding-top: var(--spacing-md) !important; }
+.pt-4 { padding-top: var(--spacing-lg) !important; }
+.pt-5 { padding-top: var(--spacing-xl) !important; }
+
+/* Padding Bottom */
+.pb-0 { padding-bottom: 0 !important; }
+.pb-1 { padding-bottom: var(--spacing-xs) !important; }
+.pb-2 { padding-bottom: var(--spacing-sm) !important; }
+.pb-3 { padding-bottom: var(--spacing-md) !important; }
+.pb-4 { padding-bottom: var(--spacing-lg) !important; }
+.pb-5 { padding-bottom: var(--spacing-xl) !important; }
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* 10. Responsive Layout (Media Queries) */
+
+/* Hide mobile menu and overlay on desktop */
+@media (min-width: 993px) {
+    .mobile-nav,
+    .overlay {
+        display: none !important;
+    }
+}
+
+@media (max-width: 992px) { /* Medium devices (Tablets) */
+    .nav-menu {
+        display: none; /* Hide desktop nav */
+    }
+    .mobile-menu-toggle {
+        display: block; /* Show mobile toggle */
+    }
+
+    .hero {
+        padding: var(--spacing-xxl) 0;
+        min-height: 60vh;
+    }
+    .hero h1 {
+        font-size: 2.8em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) { /* Small devices (Larger Phones) */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.75em; }
+    h3 { font-size: 1.5em; }
+
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .header .logo {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        padding: 5rem 0;
+        min-height: 50vh;
+    }
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    .card {
+        padding: var(--spacing-md);
+    }
+
+    .footer .container {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    .footer-nav ul {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    .social-icons {
+        order: -1; /* Place social icons above nav on mobile */
+    }
+    .footer p {
+        margin-top: var(--spacing-sm);
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) { /* Extra small devices (Phones) */
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.3em; }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .hero .btn {
+        width: 100%;
+    }
+
+    .mobile-nav {
+        width: 100%; /* Full width mobile menu on very small screens */
+        left: -100%;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+}

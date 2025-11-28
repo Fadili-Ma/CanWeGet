@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - CanWeGet.com</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #007bff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            display: inline-block;
+            font-size: 2.2em;
+            vertical-align: middle;
+        }
+        nav {
+            display: inline-block;
+            margin-left: 30px;
+            vertical-align: middle;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 25px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #e2e6ea;
+            text-decoration: underline;
+        }
+        .hero {
+            background: linear-gradient(to right, #0056b3, #007bff);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        .section {
+            background: #fff;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 35px;
+            font-size: 2.5em;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #007bff;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        .section p, .section li {
+            font-size: 1.1em;
+            color: #495057;
+        }
+        .section ol {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .section ol li {
+            background: #e9f5ff;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-left: 5px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .section ol li h3 {
+            color: #0056b3;
+            margin-top: 0;
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .team-member {
+            background: #fdfdfd;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .team-member img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #007bff;
+            box-shadow: 0 0 0 6px rgba(0,123,255,0.2);
+        }
+        .team-member h3 {
+            color: #343a40;
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        .team-member p {
+            color: #6c757d;
+            font-size: 1em;
+        }
+        footer {
+            background: #343a40;
+            color: #e2e6ea;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #e2e6ea;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #007bff;
+            text-decoration: underline;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #28a745;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,123,255,0.2);
+        }
+        .cta-button:hover {
+            background-color: #218838;
+            transform: translateY(-3px);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>CanWeGet.com</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2>About CanWeGet.com</h2>
+            <p>Unlocking better deals, together. Welcome to the future of smart shopping!</p>
+        </div>
+    </div>
+
+    <main class="container">
+
+        <section class="section">
+            <h2>Our Mission</h2>
+            <p>At CanWeGet.com, our core mission is to empower consumers by leveraging the collective buying power of a united community. We strive to make premium products and services more affordable and accessible to everyone. By facilitating group purchases, we aim to secure exclusive discounts and deals that are typically out of reach for individual shoppers. Our commitment is to transparency, fairness, and creating a vibrant marketplace where every member benefits significantly from their participation.</p>
+            <p>We believe in a world where quality products don't come with exorbitant price tags, and where the collective voice of consumers dictates better value. CanWeGet.com is more than just a platform; it's a movement towards smarter, more equitable commerce driven by community spirit.</p>
+        </section>
+
+        <section class="section">
+            <h2>How a Buying Group Works</h2>
+            <p>Experience the simple yet powerful process of collective buying with CanWeGet.com. Here’s how you can save big:</p>
+            <ol>
+                <li>
+                    <h3>1. Discover & Suggest Products</h3>
+                    <p>Browse our curated selection or suggest products you're interested in. Our community can upvote suggestions, letting us know what's in high demand, from gadgets to groceries, home essentials to unique finds.</p>
+                </li>
+                <li>
+                    <h3>2. Express Collective Interest</h3>
+                    <p>Once a product gains significant interest, members commit to purchasing it if a predefined minimum quantity or target price is met. This commitment signals our collective buying power to suppliers.</p>
+                </li>
+                <li>
+                    <h3>3. Negotiate Exclusive Deals</h3>
+                    <p>With a guaranteed volume of interested buyers, CanWeGet.com approaches manufacturers and distributors. We leverage this collective demand to negotiate substantial bulk discounts and secure exclusive offers that are unavailable to the general public.</p>
+                </li>
+                <li>
+                    <h3>4. Finalize Your Purchase</h3>
+                    <p>When a successful deal is struck, and all conditions are met, members finalize their purchase directly through our secure platform. We streamline the process to ensure a hassle-free transaction at the agreed-upon discounted price.</p>
+                </li>
+                <li>
+                    <h3>5. Enjoy Your Savings!</h3>
+                    <p>The product is delivered to your doorstep, and you get to enjoy significant savings without compromising on quality. It's the smartest way to shop, powered by community.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Meet Our Team</h2>
+            <p style="text-align: center; margin-bottom: 40px;">The dedicated individuals who make CanWeGet.com possible, working tirelessly to bring you the best opportunities.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/140x140?text=Jane" alt="Jane Doe, CEO & Founder">
+                    <h3>Jane Doe</h3>
+                    <p><strong>CEO & Founder</strong></p>
+                    <p>A visionary leader passionate about empowering consumers and building strong communities through innovative commerce solutions.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/140x140?text=John" alt="John Smith, Head of Partnerships">
+                    <h3>John Smith</h3>
+                    <p><strong>Head of Partnerships</strong></p>
+                    <p>With years of experience in supply chain management, John excels at forging strong relationships and securing unbeatable deals with vendors.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/140x140?text=Emily" alt="Emily White, Community Manager">
+                    <h3>Emily White</h3>
+                    <p><strong>Community Manager</strong></p>
+                    <p>Emily is the heart of our community, ensuring members feel heard, fostering engagement, and translating insights into actionable strategies.</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/140x140?text=David" alt="David Lee, Lead Developer">
+                    <h3>David Lee</h3>
+                    <p><strong>Lead Developer</strong></p>
+                    <p>The architect behind our seamless platform, David ensures a robust, secure, and user-friendly experience for all our members.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="text-align: center;">
+            <h2>Ready to Maximize Your Savings?</h2>
+            <p>Join the growing community at CanWeGet.com today and start discovering incredible deals!</p>
+            <a href="/join.html" class="cta-button">Join CanWeGet.com Now!</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CanWeGet.com. All rights reserved.</p>
+            <p>
+                <a href="/">Home</a> |
+                <a href="/about.html">About</a> |
+                <a href="/join.html">Join</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

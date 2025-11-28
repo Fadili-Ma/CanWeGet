@@ -3,424 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>CanWeGet.com | Group Buying Deals & Wholesale Discounts</title>
-    <meta name="description" content="Join CanWeGet buying groups to unlock huge wholesale discounts. We pool demand to lower prices on premium electronics and goods.">
-    <meta name="keywords" content="group buying, social commerce, wholesale discounts, deal drop, CanWeGet">
-    <meta name="author" content="CanWeGet.com">
-    <link rel="canonical" href="https://canweget.com/">
-
+    <title>CanWeGet.com - Your Ultimate Buying Group for Amazing Deals</title>
+    <meta name="description" content="Join CanWeGet.com, the leading buying group platform. Pool your purchasing power with others to unlock incredible discounts on products you love. Save more, together!">
+    <meta property="og:title" content="CanWeGet.com - Your Ultimate Buying Group for Amazing Deals">
+    <meta property="og:description" content="Join CanWeGet.com, the leading buying group platform. Pool your purchasing power with others to unlock incredible discounts on products you love. Save more, together!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://canweget.com/">
-    <meta property="og:title" content="CanWeGet.com | Unlock 40% Off Group Deals">
-    <meta property="og:description" content="We need a few more people to unlock the discount! Join the group buy today.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Barista Pro Espresso Machine",
-      "image": ["https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"],
-      "description": "Premium Espresso Machine available at 40% off via Group Buy.",
-      "brand": { "@type": "Brand", "name": "BaristaPro" },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://canweget.com",
-        "priceCurrency": "USD",
-        "price": "399.00",
-        "availability": "https://schema.org/InStock"
-      }
-    }
-    </script>
-
+    <meta property="og:url" content="https://www.canweget.com/">
+    <meta property="og:image" content="https://www.canweget.com/assets/og-image.jpg"> <!-- Placeholder for a real OG image -->
+    <link rel="icon" href="/favicon.ico"> <!-- Placeholder for a real favicon -->
     <style>
-        :root {
-            --primary: #2563eb; 
-            --primary-dark: #1e40af;
-            --accent: #f97316;  
-            --dark: #0f172a;
-            --light: #f1f5f9;
-            --success: #10b981;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
-        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        html { scroll-behavior: smooth; }
-        a { text-decoration: none; color: inherit; }
-
-        /* --- Header & Menu --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 5%;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--dark); letter-spacing: -1px; }
-        .logo span { color: var(--primary); }
-        
-        /* Navigation Menu */
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        .nav-link {
-            font-weight: 600;
-            color: #64748b;
-            transition: 0.3s;
-            font-size: 0.95rem;
-        }
-        .nav-link:hover { color: var(--primary); }
-        
-        .nav-btn {
-            padding: 0.5rem 1.2rem;
-            border: 2px solid var(--dark);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        .nav-btn:hover { background: var(--dark); color: white; }
-
-        /* --- Hero Section --- */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            padding: 4rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        .product-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            text-align: center;
-            position: relative;
-        }
-        .badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--accent);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-        .product-img {
+        body { font-family: sans-serif; margin: 0; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background-color: #007bff; color: white; padding: 15px 0; }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        header .logo { font-size: 28px; font-weight: bold; text-decoration: none; color: white; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+        nav ul li { margin-left: 25px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .hero { background-color: #f8f9fa; padding: 80px 0; text-align: center; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; color: #007bff; }
+        .hero p { font-size: 20px; margin-bottom: 40px; }
+        .hero .hero-image {
             width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-        .product-card:hover .product-img { transform: scale(1.05); }
-
-        .deal-info h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 1rem; }
-        .price-block { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; }
-        .current-price { font-size: 2.5rem; font-weight: 800; color: var(--primary); }
-        .retail-price { text-decoration: line-through; color: #94a3b8; font-size: 1.5rem; }
-        
-        .progress-container { margin-bottom: 1.5rem; }
-        .progress-labels { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600; }
-        .bar-bg { background: #e2e8f0; height: 16px; border-radius: 10px; overflow: hidden; }
-        .bar-fill { 
-            height: 100%; 
-            background: linear-gradient(90deg, var(--primary), #60a5fa); 
-            width: 0%; 
-            transition: width 1s ease-in-out;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            padding: 1.2rem;
-            background: var(--dark);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-bottom: 1rem;
-        }
-        .cta-button:hover { background: var(--primary); transform: translateY(-2px); }
-
-        .timer { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; font-variant-numeric: tabular-nums; }
-        .time-unit { text-align: center; }
-        .time-val { font-size: 1.5rem; font-weight: 800; display: block; }
-        .time-lbl { font-size: 0.8rem; text-transform: uppercase; color: #64748b; }
-
-        /* --- How it Works --- */
-        .how-it-works { background: white; padding: 4rem 5%; text-align: center; }
-        .section-title { font-size: 2rem; margin-bottom: 1rem; }
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 3rem auto 0;
-        }
-        .step-card i { font-size: 2rem; color: var(--primary); margin-bottom: 1rem; display: block;}
-
-        /* --- Contact --- */
-        .contact-section { padding: 5rem 5%; background: var(--dark); color: white; text-align: center; }
-        .contact-container {
             max-width: 600px;
+            height: auto;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255,255,255,0.1);
+            display: block;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiByeD0iOCIgZmlsbD0iI0REREREQSIvPgogPHBhdGggZD0iTTMwMCAxNTAgQzMwMCAxNTAgNDAwIDEwMCA1MDAgMTUwQzYwMCAyMDAgNTUwIDMwMCA0MDAgMzUwQzI1MCA0MDAgMTAwIDM1MCAxMDAgMjUwQzEwMCAxNTAgMjAwIDEwMCAzMDAgMTUwWiIgc3Ryb2tlPSIjQUFBQUFBIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"); /* Placeholder for assets/hero.svg */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
-        .form-group { margin-bottom: 1.5rem; text-align: left; }
-        .form-control {
-            width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #475569;
-            background: #0f172a; color: white; font-size: 1rem; outline: none; transition: 0.3s;
-        }
-        .form-control:focus { border-color: var(--primary); }
-        .submit-btn {
-            width: 100%; padding: 1rem; background: var(--primary); color: white; border: none;
-            border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: 0.3s;
-        }
-        .submit-btn:hover { background: #3b82f6; }
+        .btn-primary { background-color: #28a745; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 20px; font-weight: bold; }
+        .features { padding: 60px 0; background-color: #fff; text-align: center; }
+        .features h2 { font-size: 36px; margin-bottom: 50px; color: #007bff; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .feature-item { padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #fff; }
+        .feature-item h3 { font-size: 24px; color: #333; margin-bottom: 15px; }
+        .feature-item p { font-size: 16px; line-height: 1.6; }
+        .deals { padding: 60px 0; background-color: #f8f9fa; text-align: center; }
+        .deals h2 { font-size: 36px; margin-bottom: 50px; color: #007bff; }
+        .deals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .deal-card { background-color: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; text-align: left; }
+        .deal-card img { width: 100%; height: 200px; object-fit: cover; }
+        .deal-card-content { padding: 20px; }
+        .deal-card h3 { font-size: 22px; margin-top: 0; margin-bottom: 10px; color: #333; }
+        .deal-card p { font-size: 16px; color: #555; margin-bottom: 15px; }
+        .deal-card .price { font-size: 24px; font-weight: bold; color: #28a745; display: block; margin-bottom: 10px; }
+        .deal-card .original-price { text-decoration: line-through; color: #999; margin-left: 10px; font-size: 18px; }
+        .deal-card .progress-bar { background-color: #e9ecef; border-radius: 5px; height: 10px; margin-top: 15px; overflow: hidden; }
+        .deal-card .progress { background-color: #007bff; height: 100%; width: 60%; /* Example progress */ border-radius: 5px; }
+        .deal-card .progress-text { font-size: 14px; color: #555; margin-top: 5px; }
+        .cta-section { background-color: #007bff; color: white; padding: 80px 0; text-align: center; }
+        .cta-section h2 { font-size: 40px; margin-bottom: 20px; }
+        .cta-section p { font-size: 22px; margin-bottom: 40px; }
+        footer { background-color: #333; color: white; padding: 40px 0; text-align: center; }
+        footer .container { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
+        footer .footer-col { margin-bottom: 20px; min-width: 200px; text-align: left; }
+        footer .footer-col h4 { font-size: 18px; margin-bottom: 15px; color: #007bff; }
+        footer .footer-col ul { list-style: none; padding: 0; margin: 0; }
+        footer .footer-col ul li { margin-bottom: 10px; }
+        footer .footer-col ul li a { color: #ccc; text-decoration: none; }
+        footer .footer-col ul li a:hover { color: white; }
+        footer .copyright { margin-top: 30px; font-size: 14px; width: 100%; text-align: center; color: #ccc; }
 
-        /* --- Footer --- */
-        footer { background: #020617; color: #64748b; padding: 3rem 5%; }
-        .footer-content { display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto; gap: 2rem; }
-        .footer-col h4 { color: white; margin-bottom: 1rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.5rem; }
-        .footer-col a:hover { color: white; }
-
-        /* --- Modal --- */
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(5px);
-            display: flex; justify-content: center; align-items: center; z-index: 9999;
-            opacity: 0; animation: fadeIn 0.5s forwards;
-        }
-        .modal-content {
-            background: white; padding: 2.5rem; border-radius: 16px; max-width: 500px; width: 90%;
-            text-align: center; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            transform: translateY(20px); animation: slideUp 0.5s forwards 0.1s;
-        }
-        .modal-btn {
-            margin-top: 1.5rem; padding: 0.8rem 2rem; background: var(--primary);
-            color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;
-        }
-        @keyframes fadeIn { to { opacity: 1; } }
-        @keyframes slideUp { to { transform: translateY(0); } }
-
-        /* Responsive */
         @media (max-width: 768px) {
-            .nav-menu { display: none; } /* Hide links on mobile for simplicity */
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .deal-info h1 { font-size: 2rem; }
-            .price-block { justify-content: center; }
+            header .container { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
+            .hero h1 { font-size: 36px; }
+            .hero p { font-size: 18px; }
+            .features h2, .deals h2, .cta-section h2 { font-size: 30px; }
+            footer .container { justify-content: center; text-align: center; }
+            footer .footer-col { margin-right: 20px; margin-left: 20px; }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
-    <div id="demoModal" class="modal-overlay">
-        <div class="modal-content">
-            <div style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"><i class="fas fa-info-circle"></i></div>
-            <h2 style="margin-bottom: 10px;">Welcome to CanWeGet.com</h2>
-            <p style="color: #64748b; margin-bottom: 15px;">
-                This website is a <strong>demonstration concept</strong> for a group buying platform.
-            </p>
-            <p style="font-size: 0.9rem; background: #f1f5f9; padding: 10px; border-radius: 8px; color: #475569;">
-                <strong>Note:</strong> No products are actually for sale, and no payments will be processed.
-            </p>
-            <button class="modal-btn" onclick="closeModal()">Understood, let me see</button>
-        </div>
-    </div>
-
     <header>
-        <div class="logo">CanWeGet<span>.</span></div>
-        
-        <nav class="nav-menu">
-            <a href="#how-it-works" class="nav-link">How it Works</a>
-            <a href="past-drops.html" class="nav-link" onclick="comingSoon(event)">Past Drops</a>
-            <a href="faq.html" class="nav-link" onclick="comingSoon(event)">FAQ</a>
-            <a href="terms.html" class="nav-link" onclick="comingSoon(event)">Terms</a>
-        </nav>
-
-        <a href="#contact" class="nav-btn">Suggest Product</a>
+        <div class="container">
+            <a href="/" class="logo">CanWeGet.com</a>
+            <nav>
+                <ul>
+                    <li><a href="/deals">Deals</a></li>
+                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="/suggest-deal">Suggest a Deal</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="product-card">
-            <div class="badge">40% OFF</div>
-            <img src="https://images.unsplash.com/photo-1517142089942-ba376ce32a2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Espresso Machine" class="product-img">
-            <p style="color:#64748b; font-size: 0.9rem;">Current Deal #402</p>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Unlock Massive Savings Together</h1>
+                <p>Join CanWeGet.com and pool your purchasing power to get exclusive group discounts on everything you need.</p>
+                <div class="hero-image" aria-label="People collaborating to save money" role="img"></div>
+                <a href="/join-group" class="btn-primary">Join Our Buying Group</a>
+            </div>
+        </section>
 
-        <div class="deal-info">
-            <p style="color: var(--accent); font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Active Group Buy</p>
-            <h1>The Barista Pro Espresso Machine</h1>
-            <div class="price-block">
-                <span class="current-price">$399</span>
-                <span class="retail-price">$699</span>
-            </div>
-            <div class="progress-container">
-                <div class="progress-labels">
-                    <span id="joined-count">34 joined</span>
-                    <span>Goal: 50</span>
+        <section class="features">
+            <div class="container">
+                <h2>Why Choose CanWeGet.com?</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h3>Bigger Discounts</h3>
+                        <p>The more people who commit, the lower the price. We negotiate bulk deals you can't get alone.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Wide Product Range</h3>
+                        <p>From electronics to home goods, services to groceries, discover deals across various categories.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Easy & Secure</h3>
+                        <p>Participate in deals with confidence. Our platform is built for transparency and security.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Community Driven</h3>
+                        <p>Suggest products, vote on deals, and connect with other savvy shoppers.</p>
+                    </div>
                 </div>
-                <div class="bar-bg">
-                    <div class="bar-fill" id="progress-bar"></div>
-                </div>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #64748b;">
-                    <i class="fas fa-fire" style="color: var(--accent)"></i> 
-                    Need <span id="needed-count" style="font-weight: bold; color: var(--dark)">16</span> more to unlock the price!
-                </p>
             </div>
-            <button class="cta-button" onclick="joinGroup()">YES, I'M IN!</button>
-            <p style="font-size: 0.8rem; color: #94a3b8; text-align: center;">No charge until the goal is reached.</p>
-            <div class="timer">
-                <div class="time-unit"><span class="time-val">02</span><span class="time-lbl">Days</span></div>
-                <div class="time-unit"><span class="time-val">14</span><span class="time-lbl">Hours</span></div>
-                <div class="time-unit"><span class="time-val">45</span><span class="time-lbl">Mins</span></div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="how-it-works" id="how-it-works">
-        <h2 class="section-title">How CanWeGet Works</h2>
-        <div class="steps">
-            <div class="step-card">
-                <i class="fas fa-users"></i>
-                <h3>1. Join the Group</h3>
-                <p>Commit to buying at the discounted price. You won't be charged yet.</p>
+        <section class="deals">
+            <div class="container">
+                <h2>Our Latest & Hottest Deals</h2>
+                <div class="deals-grid">
+                    <div class="deal-card">
+                        <img src="https://via.placeholder.com/400x200?text=Product+Image+1" alt="Product 1">
+                        <div class="deal-card-content">
+                            <h3>Premium Noise-Cancelling Headphones</h3>
+                            <p>Experience immersive sound with active noise cancellation. Perfect for travel or focus.</p>
+                            <span class="price">$149.99<span class="original-price">$299.99</span></span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%;"></div>
+                            </div>
+                            <p class="progress-text">75% of target reached (150/200 units)</p>
+                            <a href="/deal/headphones" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
+                        </div>
+                    </div>
+                    <div class="deal-card">
+                        <img src="https://via.placeholder.com/400x200?text=Product+Image+2" alt="Product 2">
+                        <div class="deal-card-content">
+                            <h3>Smart Home Security Camera (2-Pack)</h3>
+                            <p>Keep your home safe with these easy-to-install, AI-powered security cameras.</p>
+                            <span class="price">$89.99<span class="original-price">$169.99</span></span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                            <p class="progress-text">90% of target reached (90/100 units)</p>
+                            <a href="/deal/security-camera" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
+                        </div>
+                    </div>
+                    <div class="deal-card">
+                        <img src="https://via.placeholder.com/400x200?text=Product+Image+3" alt="Product 3">
+                        <div class="deal-card-content">
+                            <h3>Ergonomic Office Chair</h3>
+                            <p>Improve your posture and comfort with this highly adjustable ergonomic office chair.</p>
+                            <span class="price">$199.99<span class="original-price">$350.00</span></span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                            <p class="progress-text">50% of target reached (25/50 units)</p>
+                            <a href="/deal/office-chair" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/deals" class="btn-primary" style="margin-top: 50px; display: inline-block;">View All Deals</a>
             </div>
-            <div class="step-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>2. Hit the Target</h3>
-                <p>We need a minimum number of buyers to unlock the bulk discount.</p>
-            </div>
-            <div class="step-card">
-                <i class="fas fa-shipping-fast"></i>
-                <h3>3. We All Save</h3>
-                <p>Once the goal is met, the deal activates and the product ships.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <h2>Contact Us</h2>
-            <p>Have a product suggestion or interested in this domain?</p>
-            <form action="https://formspree.io/f/xldvvpzq" method="POST">
-                <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea name="message" class="form-control" rows="4" placeholder="I'd like to suggest..." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Start Saving?</h2>
+                <p>Join thousands of smart shoppers and unlock incredible discounts today. It's free and easy!</p>
+                <a href="/join-group" class="btn-primary">Become a Member Now</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="footer-content">
+        <div class="container">
             <div class="footer-col">
                 <h4>CanWeGet.com</h4>
-                <p>Democratizing wholesale pricing through community power.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
                 <ul>
-                    <li><a href="#" onclick="comingSoon(event)">About Us</a></li>
-                    <li><a href="#" onclick="comingSoon(event)">Careers</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/how-it-works">How It Works</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                    <li><a href="/press">Press</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Legal</h4>
+                <h4>Support</h4>
                 <ul>
-                    <li><a href="terms.html" onclick="comingSoon(event)">Terms of Service</a></li>
-                    <li><a href="privacy.html" onclick="comingSoon(event)">Privacy Policy</a></li>
-                    <li><a href="faq.html" onclick="comingSoon(event)">FAQ</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/terms">Terms of Service</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
                 </ul>
             </div>
-        </div>
-        <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #1e293b; padding-top: 1rem;">
-            &copy; 2024 CanWeGet.com - A Demo Concept.
+            <div class="footer-col">
+                <h4>Discover</h4>
+                <ul>
+                    <li><a href="/deals">All Deals</a></li>
+                    <li><a href="/categories">Categories</a></li>
+                    <li><a href="/suggest-deal">Suggest a Deal</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://facebook.com/canweget" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://twitter.com/canweget" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://instagram.com/canweget" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                &copy; 2023 CanWeGet.com. All rights reserved.
+            </div>
         </div>
     </footer>
-
-    <script>
-        // 1. Modal Logic
-        function closeModal() {
-            const modal = document.getElementById('demoModal');
-            modal.style.opacity = '0';
-            setTimeout(() => { modal.style.display = 'none'; }, 500); 
-        }
-
-        // 2. Coming Soon Logic (For pages you haven't created yet)
-        function comingSoon(e) {
-            e.preventDefault(); // Stop the link from trying to load
-            alert("This page is under construction! You can create this page in the next step.");
-        }
-
-        // 3. Progress Bar Logic
-        const goal = 50;
-        let currentJoined = 34;
-        const barFill = document.getElementById('progress-bar');
-        const joinedText = document.getElementById('joined-count');
-        const neededText = document.getElementById('needed-count');
-
-        function updateUI() {
-            let percentage = (currentJoined / goal) * 100;
-            if(percentage > 100) percentage = 100;
-
-            barFill.style.width = percentage + '%';
-            joinedText.innerText = `${currentJoined} joined`;
-            
-            const needed = goal - currentJoined;
-            if (needed <= 0) {
-                neededText.parentElement.innerHTML = "<span style='color:var(--success)'>Target Reached! Deal Unlocked!</span>";
-                barFill.style.background = "var(--success)";
-            } else {
-                neededText.innerText = needed;
-            }
-        }
-
-        function joinGroup() {
-            if (currentJoined < goal) {
-                currentJoined++;
-                const btn = document.querySelector('.cta-button');
-                btn.innerText = "Processing...";
-                btn.style.opacity = "0.7";
-                setTimeout(() => {
-                    updateUI();
-                    btn.innerText = "YOU ARE IN! ✓";
-                    btn.style.background = "var(--success)";
-                    btn.disabled = true;
-                }, 600);
-            }
-        }
-
-        updateUI();
-    </script>
 </body>
 </html>

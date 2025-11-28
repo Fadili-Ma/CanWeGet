@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://canweget.com/sitemap.xml
+Sitemap: /sitemap.xml

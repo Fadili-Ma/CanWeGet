@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="1600" height="400" fill="#F0F8FF"/>
+  <line x1="0" y1="370" x2="1600" y2="370" stroke="#D3D3D3" stroke-width="2"/>
+  <g id="people-group" transform="translate(100, 0)">
+    <g transform="translate(0, 50)">
+      <circle cx="150" cy="120" r="35" fill="#6A5ACD"/>
+      <path d="M115 155 L115 370 A30 30 0 0 0 185 370 L185 155 Z" fill="#6A5ACD" />
+      <path d="M100 200 Q80 220 100 240" stroke="#6A5ACD" stroke-width="15" fill="none" stroke-linecap="round"/>
+      <path d="M200 200 Q220 220 200 240" stroke="#6A5ACD" stroke-width="15" fill="none" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(250, 20)">
+      <circle cx="150" cy="100" r="38" fill="#008080"/>
+      <path d="M112 138 L112 370 A35 35 0 0 0 188 370 L188 138 Z" fill="#008080" />
+      <path d="M100 180 Q80 200 100 220" stroke="#008080" stroke-width="15" fill="none" stroke-linecap="round"/>
+      <path d="M200 180 Q220 200 200 220" stroke="#008080" stroke-width="15" fill="none" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(500, 70)">
+      <circle cx="150" cy="140" r="32" fill="#4682B4"/>
+      <path d="M118 172 L118 370 A25 25 0 0 0 182 370 L182 172 Z" fill="#4682B4" />
+      <path d="M100 220 Q80 240 100 260" stroke="#4682B4" stroke-width="15" fill="none" stroke-linecap="round"/>
+      <path d="M200 220 Q220 240 200 260" stroke="#4682B4" stroke-width="15" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g id="boxes-group" transform="translate(800, 0)">
+    <rect x="0" y="280" width="140" height="90" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="10" y="210" width="120" height="80" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="0" y="140" width="140" height="80" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="170" y="250" width="110" height="120" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="180" y="180" width="90" height="80" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="300" y="300" width="100" height="70" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="290" y="240" width="90" height="70" fill="#D2B48C" rx="8" ry="8"/>
+    <rect x="420" y="320" width="100" height="50" fill="#D2B48C" rx="8" ry="8"/>
+  </g>
+  <g transform="translate(450, 180)">
+    <circle cx="0" cy="0" r="45" fill="#FF6347"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-weight="bold" font-size="45" text-anchor="middle" fill="#FFFFFF">%</text>
+  </g>
+  <g transform="translate(900, 120)">
+    <path d="M-45,0 L0,-45 L45,0 L0,45 Z" fill="#FFA500"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-weight="bold" font-size="45" text-anchor="middle" fill="#FFFFFF">$</text>
+  </g>
+  <g transform="translate(1100, 200)">
+    <rect x="-35" y="-35" width="70" height="70" rx="15" fill="#32CD32"/>
+    <text x="0" y="15" font-family="Arial, sans-serif" font-weight="bold" font-size="45" text-anchor="middle" fill="#FFFFFF">↓</text>
+  </g>
+  <g transform="translate(1350, 280)">
+    <circle cx="0" cy="0" r="35" fill="#FFD700"/>
+    <text x="0" y="12" font-family="Arial, sans-serif" font-weight="bold" font-size="30" text-anchor="middle" fill="#8B0000">3+</text>
+  </g>
+</svg>

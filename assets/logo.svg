@@ -1,0 +1,22 @@
+<svg width="230" height="50" viewBox="0 0 230 50" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text { font-family: sans-serif; font-weight: bold; font-size: 30px; fill: #3B82F6; }
+      .logo-icon { fill: #3B82F6; }
+    </style>
+  </defs>
+  <g>
+    <!-- Simple, modern shopping cart icon -->
+    <!-- Basket body (slightly angled for a dynamic look) -->
+    <path class="logo-icon" d="M10 15 L12 35 L32 35 L30 15 Z" />
+    <!-- Handle -->
+    <path class="logo-icon" d="M30 15 L34 15 L34 18 L30 18 Z" />
+    <!-- Wheels -->
+    <circle class="logo-icon" cx="17" cy="38" r="3" />
+    <circle class="logo-icon" cx="27" cy="38" r="3" />
+    
+    <!-- Text: 'CanWeGet' -->
+    <!-- Positioned after the icon with some spacing, aligned vertically -->
+    <text x="44" y="40" class="logo-text">CanWeGet</text>
+  </g>
+</svg>
