@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Deals - CanWeGet.com</title>
+    <meta name="description" content="Browse live group buying deals on CanWeGet.com. Join other shoppers, watch the countdown, and unlock better prices when the group target is reached.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO basics: Open Graph -->
+    <meta property="og:title" content="Group Deals - CanWeGet.com">
+    <meta property="og:description" content="Discover active group deals, join others, and save more with countdown-based offers on CanWeGet.com.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.canweget.com/deals.html">
+    <meta property="og:image" content="https://www.canweget.com/assets/images/og-image.jpg">
+</head>
+<body class="light-mode">
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">CWG</span>
+                <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="deals.html" class="active">Deals</a></li>
+                    <li><a href="create.html">Create a Deal</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">🌙</span>
+            </button>
+        </div>
+
+        <!-- Top Ad Space -->
+        <div class="ad-wrapper ad-wrapper-top">
+            <div class="container">
+                <div class="ad-space ad-space-leaderboard">
+                    Ad Space (728x90)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section section-page-header">
+            <div class="container page-header-grid">
+                <div>
+                    <h1>Live Group Deals</h1>
+                    <p>Join an active group to unlock better prices, or filter to find deals that match your interests.</p>
+                </div>
+                <form class="deal-filters" id="dealFilters" autocomplete="off">
+                    <label class="sr-only" for="dealSearch">Search deals</label>
+                    <input type="search" id="dealSearch" name="q" placeholder="Search by product or category">
+                    <select id="dealCategory" name="category" aria-label="Filter by category">
+                        <option value="">All categories</option>
+                        <option value="tech">Tech & gadgets</option>
+                        <option value="home">Home & groceries</option>
+                        <option value="fitness">Fitness & wellness</option>
+                        <option value="office">Office & teams</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+
+        <!-- Mid-page Ad -->
+        <section class="section section-ad-mid">
+            <div class="container">
+                <div class="ad-space ad-space-banner">
+                    Ad Space (728x90)
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals Grid -->
+        <section class="section section-deals-list">
+            <div class="container">
+                <div id="dealsGrid" class="deals-grid deals-grid-listing">
+                    <!-- Deal Card 1 -->
+                    <article class="deal-card" data-category="tech" data-deal-id="deal-1">
+                        <div class="deal-card-header">
+                            <h2 class="deal-title">Wireless Earbuds Group Bundle</h2>
+                            <span class="deal-badge">Tech</span>
+                        </div>
+                        <p class="deal-description">
+                            High-quality wireless earbuds with noise isolation, bundled in a group order to lower the price for everyone.
+                        </p>
+                        <div class="deal-meta-row">
+                            <span class="deal-participants">
+                                <span class="deal-joined" data-joined="deal-1">32</span> /
+                                <span class="deal-target">50</span> joined
+                            </span>
+                            <span class="deal-discount">Up to 28% off</span>
+                        </div>
+                        <div class="deal-timer" data-deadline="2026-03-15T18:00:00Z">
+                            <span class="timer-label">Time left:</span>
+                            <span class="timer-value" data-timer="deal-1">Loading…</span>
+                        </div>
+                        <div class="deal-actions">
+                            <button class="btn btn-primary btn-join" data-join="deal-1" type="button">
+                                Join deal
+                            </button>
+                            <button class="btn btn-outline btn-save" data-save="deal-1" type="button">
+                                Save for later
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Deal Card 2 -->
+                    <article class="deal-card" data-category="home" data-deal-id="deal-2">
+                        <div class="deal-card-header">
+                            <h2 class="deal-title">Monthly Organic Grocery Pack</h2>
+                            <span class="deal-badge">Home</span>
+                        </div>
+                        <p class="deal-description">
+                            Share a monthly order of organic groceries with neighbours and reduce both product and delivery costs.
+                        </p>
+                        <div class="deal-meta-row">
+                            <span class="deal-participants">
+                                <span class="deal-joined" data-joined="deal-2">18</span> /
+                                <span class="deal-target">30</span> joined
+                            </span>
+                            <span class="deal-discount">Up to 20% off</span>
+                        </div>
+                        <div class="deal-timer" data-deadline="2026-03-10T20:00:00Z">
+                            <span class="timer-label">Time left:</span>
+                            <span class="timer-value" data-timer="deal-2">Loading…</span>
+                        </div>
+                        <div class="deal-actions">
+                            <button class="btn btn-primary btn-join" data-join="deal-2" type="button">
+                                Join deal
+                            </button>
+                            <button class="btn btn-outline btn-save" data-save="deal-2" type="button">
+                                Save for later
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Inline Ad between rows -->
+                    <div class="deals-inline-ad">
+                        <div class="ad-space ad-space-inline">
+                            Ad Space (728x90)
+                        </div>
+                    </div>
+
+                    <!-- Deal Card 3 -->
+                    <article class="deal-card" data-category="fitness" data-deal-id="deal-3">
+                        <div class="deal-card-header">
+                            <h2 class="deal-title">Gym Membership Group Rate</h2>
+                            <span class="deal-badge">Fitness</span>
+                        </div>
+                        <p class="deal-description">
+                            Combine memberships with friends, family, or coworkers to unlock a negotiated annual rate at a partner gym.
+                        </p>
+                        <div class="deal-meta-row">
+                            <span class="deal-participants">
+                                <span class="deal-joined" data-joined="deal-3">7</span> /
+                                <span class="deal-target">20</span> joined
+                            </span>
+                            <span class="deal-discount">Up to 30% off</span>
+                        </div>
+                        <div class="deal-timer" data-deadline="2026-03-20T12:00:00Z">
+                            <span class="timer-label">Time left:</span>
+                            <span class="timer-value" data-timer="deal-3">Loading…</span>
+                        </div>
+                        <div class="deal-actions">
+                            <button class="btn btn-primary btn-join" data-join="deal-3" type="button">
+                                Join deal
+                            </button>
+                            <button class="btn btn-outline btn-save" data-save="deal-3" type="button">
+                                Save for later
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Deal Card 4 -->
+                    <article class="deal-card" data-category="office" data-deal-id="deal-4">
+                        <div class="deal-card-header">
+                            <h2 class="deal-title">Ergonomic Office Chairs Bulk Order</h2>
+                            <span class="deal-badge">Office</span>
+                        </div>
+                        <p class="deal-description">
+                            Upgrade your workspace by joining a bulk order of ergonomic chairs at a lower per-unit cost.
+                        </p>
+                        <div class="deal-meta-row">
+                            <span class="deal-participants">
+                                <span class="deal-joined" data-joined="deal-4">9</span> /
+                                <span class="deal-target">15</span> joined
+                            </span>
+                            <span class="deal-discount">Up to 26% off</span>
+                        </div>
+                        <div class="deal-timer" data-deadline="2026-03-05T09:00:00Z">
+                            <span class="timer-label">Time left:</span>
+                            <span class="timer-value" data-timer="deal-4">Loading…</span>
+                        </div>
+                        <div class="deal-actions">
+                            <button class="btn btn-primary btn-join" data-join="deal-4" type="button">
+                                Join deal
+                            </button>
+                            <button class="btn btn-outline btn-save" data-save="deal-4" type="button">
+                                Save for later
+                            </button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load more / Pagination -->
+                <div class="deals-pagination">
+                    <button id="loadMoreDeals" class="btn btn-outline" type="button">
+                        Load more deals
+                    </button>
+                    <p class="pagination-note">
+                        More deals are added regularly. Use the filters above to quickly find offers that match your needs.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark">CWG</span>
+                    <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+                </a>
+                <p class="footer-description">
+                    A simple way to turn group demand into better prices and smarter shopping, one deal at a time.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Visit CanWeGet on Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on X (Twitter)">X</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on Instagram">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© <span id="currentYear"></span> CanWeGet.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

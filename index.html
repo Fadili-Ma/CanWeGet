@@ -2,232 +2,321 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>CanWeGet.com - Buy Together. Save More.</title>
+    <meta name="description" content="CanWeGet.com is a group buying platform that helps you join others to get better prices on products and services. Buy together, save more, and enjoy smart shopping.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CanWeGet.com - Your Ultimate Buying Group for Amazing Deals</title>
-    <meta name="description" content="Join CanWeGet.com, the leading buying group platform. Pool your purchasing power with others to unlock incredible discounts on products you love. Save more, together!">
-    <meta property="og:title" content="CanWeGet.com - Your Ultimate Buying Group for Amazing Deals">
-    <meta property="og:description" content="Join CanWeGet.com, the leading buying group platform. Pool your purchasing power with others to unlock incredible discounts on products you love. Save more, together!">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO basics: Open Graph -->
+    <meta property="og:title" content="CanWeGet.com - Buy Together. Save More.">
+    <meta property="og:description" content="Join group deals, unlock better prices, and save more with friends and the CanWeGet community.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.canweget.com/">
-    <meta property="og:image" content="https://www.canweget.com/assets/og-image.jpg"> <!-- Placeholder for a real OG image -->
-    <link rel="icon" href="/favicon.ico"> <!-- Placeholder for a real favicon -->
-    <style>
-        body { font-family: sans-serif; margin: 0; color: #333; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        header { background-color: #007bff; color: white; padding: 15px 0; }
-        header .container { display: flex; justify-content: space-between; align-items: center; }
-        header .logo { font-size: 28px; font-weight: bold; text-decoration: none; color: white; }
-        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-        nav ul li { margin-left: 25px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-        .hero { background-color: #f8f9fa; padding: 80px 0; text-align: center; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; color: #007bff; }
-        .hero p { font-size: 20px; margin-bottom: 40px; }
-        .hero .hero-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-            background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiByeD0iOCIgZmlsbD0iI0REREREQSIvPgogPHBhdGggZD0iTTMwMCAxNTAgQzMwMCAxNTAgNDAwIDEwMCA1MDAgMTUwQzYwMCAyMDAgNTUwIDMwMCA0MDAgMzUwQzI1MCA0MDAgMTAwIDM1MCAxMDAgMjUwQzEwMCAxNTAgMjAwIDEwMCAzMDAgMTUwWiIgc3Ryb2tlPSIjQUFBQUFBIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+"); /* Placeholder for assets/hero.svg */
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .btn-primary { background-color: #28a745; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 20px; font-weight: bold; }
-        .features { padding: 60px 0; background-color: #fff; text-align: center; }
-        .features h2 { font-size: 36px; margin-bottom: 50px; color: #007bff; }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .feature-item { padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #fff; }
-        .feature-item h3 { font-size: 24px; color: #333; margin-bottom: 15px; }
-        .feature-item p { font-size: 16px; line-height: 1.6; }
-        .deals { padding: 60px 0; background-color: #f8f9fa; text-align: center; }
-        .deals h2 { font-size: 36px; margin-bottom: 50px; color: #007bff; }
-        .deals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .deal-card { background-color: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; text-align: left; }
-        .deal-card img { width: 100%; height: 200px; object-fit: cover; }
-        .deal-card-content { padding: 20px; }
-        .deal-card h3 { font-size: 22px; margin-top: 0; margin-bottom: 10px; color: #333; }
-        .deal-card p { font-size: 16px; color: #555; margin-bottom: 15px; }
-        .deal-card .price { font-size: 24px; font-weight: bold; color: #28a745; display: block; margin-bottom: 10px; }
-        .deal-card .original-price { text-decoration: line-through; color: #999; margin-left: 10px; font-size: 18px; }
-        .deal-card .progress-bar { background-color: #e9ecef; border-radius: 5px; height: 10px; margin-top: 15px; overflow: hidden; }
-        .deal-card .progress { background-color: #007bff; height: 100%; width: 60%; /* Example progress */ border-radius: 5px; }
-        .deal-card .progress-text { font-size: 14px; color: #555; margin-top: 5px; }
-        .cta-section { background-color: #007bff; color: white; padding: 80px 0; text-align: center; }
-        .cta-section h2 { font-size: 40px; margin-bottom: 20px; }
-        .cta-section p { font-size: 22px; margin-bottom: 40px; }
-        footer { background-color: #333; color: white; padding: 40px 0; text-align: center; }
-        footer .container { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; }
-        footer .footer-col { margin-bottom: 20px; min-width: 200px; text-align: left; }
-        footer .footer-col h4 { font-size: 18px; margin-bottom: 15px; color: #007bff; }
-        footer .footer-col ul { list-style: none; padding: 0; margin: 0; }
-        footer .footer-col ul li { margin-bottom: 10px; }
-        footer .footer-col ul li a { color: #ccc; text-decoration: none; }
-        footer .footer-col ul li a:hover { color: white; }
-        footer .copyright { margin-top: 30px; font-size: 14px; width: 100%; text-align: center; color: #ccc; }
-
-        @media (max-width: 768px) {
-            header .container { flex-direction: column; }
-            nav ul { margin-top: 15px; }
-            nav ul li { margin: 0 10px; }
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 18px; }
-            .features h2, .deals h2, .cta-section h2 { font-size: 30px; }
-            footer .container { justify-content: center; text-align: center; }
-            footer .footer-col { margin-right: 20px; margin-left: 20px; }
-        }
-    </style>
+    <meta property="og:image" content="https://www.canweget.com/assets/images/og-image.jpg">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">CanWeGet.com</a>
-            <nav>
-                <ul>
-                    <li><a href="/deals">Deals</a></li>
-                    <li><a href="/how-it-works">How It Works</a></li>
-                    <li><a href="/suggest-deal">Suggest a Deal</a></li>
-                    <li><a href="/about-us">About Us</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                    <li><a href="/login">Login</a></li>
+<body class="light-mode">
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">CWG</span>
+                <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="create.html">Create a Deal</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">🌙</span>
+            </button>
+        </div>
+
+        <!-- Top Ad Space -->
+        <div class="ad-wrapper ad-wrapper-top">
+            <div class="container">
+                <div class="ad-space ad-space-leaderboard">
+                    Ad Space (728x90)
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero">
-            <div class="container">
-                <h1>Unlock Massive Savings Together</h1>
-                <p>Join CanWeGet.com and pool your purchasing power to get exclusive group discounts on everything you need.</p>
-                <div class="hero-image" aria-label="People collaborating to save money" role="img"></div>
-                <a href="/join-group" class="btn-primary">Join Our Buying Group</a>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2>Why Choose CanWeGet.com?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>Bigger Discounts</h3>
-                        <p>The more people who commit, the lower the price. We negotiate bulk deals you can't get alone.</p>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Buy Together. Save More.</h1>
+                    <p>
+                        CanWeGet.com helps you join other shoppers to unlock better prices on the products you already love.
+                        Start or join a group deal in seconds and turn everyday shopping into real savings.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="deals.html" class="btn btn-primary">Browse Live Deals</a>
+                        <a href="create.html" class="btn btn-outline">Create a Deal</a>
                     </div>
-                    <div class="feature-item">
-                        <h3>Wide Product Range</h3>
-                        <p>From electronics to home goods, services to groceries, discover deals across various categories.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Easy & Secure</h3>
-                        <p>Participate in deals with confidence. Our platform is built for transparency and security.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Community Driven</h3>
-                        <p>Suggest products, vote on deals, and connect with other savvy shoppers.</p>
+                    <ul class="hero-highlights">
+                        <li>Verified group deals with transparent pricing</li>
+                        <li>No hidden fees, no bidding, just fair discounts</li>
+                        <li>Ideal for friends, families, teams, and communities</li>
+                    </ul>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <h2>Live Group Deal Snapshot</h2>
+                        <ul class="hero-deal-list">
+                            <li>
+                                <span class="deal-name">Wireless Earbuds Bundle</span>
+                                <span class="deal-meta">32 / 50 joined · 28% saved</span>
+                            </li>
+                            <li>
+                                <span class="deal-name">Family Grocery Pack</span>
+                                <span class="deal-meta">18 / 25 joined · 22% saved</span>
+                            </li>
+                            <li>
+                                <span class="deal-name">Office Chair Bulk Order</span>
+                                <span class="deal-meta">9 / 15 joined · 30% saved</span>
+                            </li>
+                        </ul>
+                        <a href="deals.html" class="hero-card-cta">See all group deals →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="deals">
+        <!-- How It Works -->
+        <section class="section section-how">
             <div class="container">
-                <h2>Our Latest & Hottest Deals</h2>
+                <header class="section-header">
+                    <h2>How CanWeGet Works</h2>
+                    <p>Join or create a group in a few simple steps and let the volume discount do the work.</p>
+                </header>
+                <div class="how-steps-grid">
+                    <article class="how-step">
+                        <span class="step-number">1</span>
+                        <h3>Discover a deal</h3>
+                        <p>Browse curated group offers from trusted merchants or search for something specific you want to purchase together.</p>
+                    </article>
+                    <article class="how-step">
+                        <span class="step-number">2</span>
+                        <h3>Join the group</h3>
+                        <p>Lock in your spot with a click. You only move forward when the minimum number of participants is reached.</p>
+                    </article>
+                    <article class="how-step">
+                        <span class="step-number">3</span>
+                        <h3>Reach the target</h3>
+                        <p>As more people join, the discount unlocks. Everyone gets the same final price once the target size is hit.</p>
+                    </article>
+                    <article class="how-step">
+                        <span class="step-number">4</span>
+                        <h3>Enjoy the savings</h3>
+                        <p>Complete your purchase with the group price and enjoy your order, knowing you paid less by buying together.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mid-page Ad -->
+        <section class="section section-ad-mid">
+            <div class="container">
+                <div class="ad-space ad-space-banner">
+                    Ad Space (728x90)
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Deals -->
+        <section class="section section-featured">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Featured Group Deals</h2>
+                    <p>Popular deals other shoppers are joining right now.</p>
+                </header>
                 <div class="deals-grid">
-                    <div class="deal-card">
-                        <img src="https://via.placeholder.com/400x200?text=Product+Image+1" alt="Product 1">
-                        <div class="deal-card-content">
-                            <h3>Premium Noise-Cancelling Headphones</h3>
-                            <p>Experience immersive sound with active noise cancellation. Perfect for travel or focus.</p>
-                            <span class="price">$149.99<span class="original-price">$299.99</span></span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 75%;"></div>
-                            </div>
-                            <p class="progress-text">75% of target reached (150/200 units)</p>
-                            <a href="/deal/headphones" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
-                        </div>
-                    </div>
-                    <div class="deal-card">
-                        <img src="https://via.placeholder.com/400x200?text=Product+Image+2" alt="Product 2">
-                        <div class="deal-card-content">
-                            <h3>Smart Home Security Camera (2-Pack)</h3>
-                            <p>Keep your home safe with these easy-to-install, AI-powered security cameras.</p>
-                            <span class="price">$89.99<span class="original-price">$169.99</span></span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 90%;"></div>
-                            </div>
-                            <p class="progress-text">90% of target reached (90/100 units)</p>
-                            <a href="/deal/security-camera" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
-                        </div>
-                    </div>
-                    <div class="deal-card">
-                        <img src="https://via.placeholder.com/400x200?text=Product+Image+3" alt="Product 3">
-                        <div class="deal-card-content">
-                            <h3>Ergonomic Office Chair</h3>
-                            <p>Improve your posture and comfort with this highly adjustable ergonomic office chair.</p>
-                            <span class="price">$199.99<span class="original-price">$350.00</span></span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 50%;"></div>
-                            </div>
-                            <p class="progress-text">50% of target reached (25/50 units)</p>
-                            <a href="/deal/office-chair" class="btn-primary" style="display: block; text-align: center; margin-top: 15px;">View Deal</a>
-                        </div>
-                    </div>
+                    <article class="deal-card">
+                        <div class="deal-badge">Trending</div>
+                        <h3>Smart Home Starter Kit</h3>
+                        <p class="deal-description">Bundle your smart bulbs, plugs, and hub in one group order and cut the price for everyone.</p>
+                        <p class="deal-meta">21 / 30 joined · Up to 25% off</p>
+                        <a href="deals.html" class="btn btn-secondary">View deal</a>
+                    </article>
+                    <article class="deal-card">
+                        <div class="deal-badge">New</div>
+                        <h3>Gym Annual Membership Pack</h3>
+                        <p class="deal-description">Gather friends or coworkers to negotiate a better yearly rate with your local gym partner.</p>
+                        <p class="deal-meta">7 / 20 joined · Up to 30% off</p>
+                        <a href="deals.html" class="btn btn-secondary">View deal</a>
+                    </article>
+                    <article class="deal-card">
+                        <div class="deal-badge">Limited</div>
+                        <h3>Organic Grocery Box</h3>
+                        <p class="deal-description">Bulk order weekly essentials with your neighborhood and reduce delivery and product costs.</p>
+                        <p class="deal-meta">15 / 25 joined · Up to 18% off</p>
+                        <a href="deals.html" class="btn btn-secondary">View deal</a>
+                    </article>
                 </div>
-                <a href="/deals" class="btn-primary" style="margin-top: 50px; display: inline-block;">View All Deals</a>
+                <div class="section-footer-link">
+                    <a href="deals.html" class="link-inline">Browse all active deals →</a>
+                </div>
             </div>
         </section>
 
-        <section class="cta-section">
+        <!-- Benefits of Group Buying -->
+        <section class="section section-benefits">
+            <div class="container benefits-grid">
+                <div>
+                    <header class="section-header">
+                        <h2>Why Buy as a Group?</h2>
+                        <p>Group buying turns individual demand into collective power.</p>
+                    </header>
+                    <ul class="benefits-list">
+                        <li>
+                            <h3>Real price leverage</h3>
+                            <p>Merchants are more willing to reduce prices when they see volume, and everyone in the group benefits equally.</p>
+                        </li>
+                        <li>
+                            <h3>Shared decision, shared value</h3>
+                            <p>Groups surface better products and deals because multiple people review the offer before committing.</p>
+                        </li>
+                        <li>
+                            <h3>Perfect for recurring needs</h3>
+                            <p>Use group buying on regular expenses like groceries, office supplies, and household items to save month after month.</p>
+                        </li>
+                        <li>
+                            <h3>Low friction, full transparency</h3>
+                            <p>You always see how many people have joined, what discount you are targeting, and when the deal is expected to close.</p>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="benefits-aside">
+                    <h3>Built for modern shoppers</h3>
+                    <p>CanWeGet.com is designed for friends, families, teams, and communities that want to stay in control of their budget while enjoying quality products.</p>
+                    <p>Use it for everything from tech gadgets to local services and shared experiences.</p>
+                    <a href="about.html" class="link-inline">Learn more about how it works →</a>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section section-testimonials">
             <div class="container">
-                <h2>Ready to Start Saving?</h2>
-                <p>Join thousands of smart shoppers and unlock incredible discounts today. It's free and easy!</p>
-                <a href="/join-group" class="btn-primary">Become a Member Now</a>
+                <header class="section-header">
+                    <h2>Trusted by Smart Shoppers</h2>
+                    <p>People use CanWeGet.com to make everyday purchases more affordable.</p>
+                </header>
+                <div class="testimonials-grid">
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “We organised a group deal for office chairs and ended up saving more than 25% compared to individual purchases.”
+                        </p>
+                        <p class="testimonial-author">Emma, Office Manager</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “Our neighbours now share a monthly grocery deal. It keeps our costs predictable and our fridge full.”
+                        </p>
+                        <p class="testimonial-author">Karim, Parent</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <p class="testimonial-text">
+                            “As a small business, group buying helps us access pro tools at prices that fit our early-stage budget.”
+                        </p>
+                        <p class="testimonial-author">Lina, Startup Founder</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="section section-newsletter">
+            <div class="container newsletter-grid">
+                <div>
+                    <h2>Get New Deals First</h2>
+                    <p>Receive a short weekly summary of the best new group deals and savings tips. No spam, ever.</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <label class="sr-only" for="newsletterEmail">Email address</label>
+                    <input type="email" id="newsletterEmail" name="email" placeholder="you@example.com" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                    <p class="form-note">You can unsubscribe at any time with a single click.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Bottom Ad -->
+        <section class="section section-ad-bottom">
+            <div class="container">
+                <div class="ad-space ad-space-footer">
+                    Ad Space (728x90)
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-col">
-                <h4>CanWeGet.com</h4>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark">CWG</span>
+                    <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+                </a>
+                <p class="footer-description">
+                    A simple way to turn group demand into better prices and smarter shopping, one deal at a time.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
                 <ul>
-                    <li><a href="/about-us">About Us</a></li>
-                    <li><a href="/how-it-works">How It Works</a></li>
-                    <li><a href="/careers">Careers</a></li>
-                    <li><a href="/press">Press</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Support</h4>
+            <div class="footer-links">
+                <h3>Legal</h3>
                 <ul>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/terms">Terms of Service</a></li>
-                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Discover</h4>
-                <ul>
-                    <li><a href="/deals">All Deals</a></li>
-                    <li><a href="/categories">Categories</a></li>
-                    <li><a href="/suggest-deal">Suggest a Deal</a></li>
-                    <li><a href="/blog">Blog</a></li>
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Visit CanWeGet on Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on X (Twitter)">X</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on Instagram">Instagram</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="https://facebook.com/canweget" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                    <li><a href="https://twitter.com/canweget" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                    <li><a href="https://instagram.com/canweget" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                &copy; 2023 CanWeGet.com. All rights reserved.
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© <span id="currentYear"></span> CanWeGet.com. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Deal - CanWeGet.com</title>
+    <meta name="description" content="Start your own group buying deal on CanWeGet.com. Set the title, description, target price, participant goal, and deadline to gather buyers and unlock discounts.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO basics: Open Graph -->
+    <meta property="og:title" content="Create a Group Deal - CanWeGet.com">
+    <meta property="og:description" content="Launch your own group buying offer on CanWeGet.com. Gather participants to negotiate better prices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.canweget.com/create.html">
+    <meta property="og:image" content="https://www.canweget.com/assets/images/og-image.jpg">
+</head>
+<body class="light-mode">
+
+    <!-- Header / Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark">CWG</span>
+                <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="deals.html">Deals</a></li>
+                    <li><a href="create.html" class="active">Create a Deal</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon theme-icon-sun">☀</span>
+                <span class="theme-icon theme-icon-moon">🌙</span>
+            </button>
+        </div>
+
+        <!-- Top Ad Space -->
+        <div class="ad-wrapper ad-wrapper-top">
+            <div class="container">
+                <div class="ad-space ad-space-leaderboard">
+                    Ad Space (728x90)
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="section section-page-header">
+            <div class="container">
+                <div class="page-header-content">
+                    <h1>Create Your Group Deal</h1>
+                    <p>
+                        Describe the product or service you want to buy in a group. Set your target participant number and deadline.
+                        Once published, others can join and help unlock the discount.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mid-page Ad -->
+        <section class="section section-ad-mid">
+            <div class="container">
+                <div class="ad-space ad-space-banner">
+                    Ad Space (728x90)
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Form -->
+        <section class="section section-create-form">
+            <div class="container">
+                <form id="createDealForm" class="create-form" novalidate>
+                    <fieldset>
+                        <legend>Deal Basics</legend>
+                        
+                        <div class="form-group">
+                            <label for="dealTitle">Deal Title *</label>
+                            <input type="text" id="dealTitle" name="title" required maxlength="100" placeholder="e.g. Wireless Earbuds Bulk Order">
+                            <p class="form-help">Make it clear and specific (max 100 characters)</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dealCategory">Category</label>
+                                <select id="dealCategory" name="category">
+                                    <option value="tech">Tech & gadgets</option>
+                                    <option value="home">Home & groceries</option>
+                                    <option value="fitness">Fitness & wellness</option>
+                                    <option value="office">Office & teams</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="dealImage">Product Image URL</label>
+                                <input type="url" id="dealImage" name="image" placeholder="https://example.com/image.jpg">
+                                <p class="form-help">Optional: URL to product image</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Deal Details</legend>
+                        
+                        <div class="form-group">
+                            <label for="dealDescription">Description *</label>
+                            <textarea id="dealDescription" name="description" required rows="5" maxlength="500" placeholder="Describe the product, expected individual price, target discount, merchant link, etc."></textarea>
+                            <p class="form-help">Max 500 characters. Be specific about what you want to buy and why others should join.</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dealPrice">Target Price per Unit</label>
+                                <input type="number" id="dealPrice" name="price" min="1" step="0.01" placeholder="e.g. 49.99">
+                                <p class="form-help">What price per item do you expect with the group discount?</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="dealTarget">Target Participants *</label>
+                                <input type="number" id="dealTarget" name="target" required min="5" max="100" value="20">
+                                <p class="form-help">Minimum number needed to unlock the group price (5–100)</p>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dealDeadline">Deadline</label>
+                                <input type="datetime-local" id="dealDeadline" name="deadline" min="">
+                                <p class="form-help">When does the deal close? (min 24 hours from now)</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="dealLink">Merchant/Product Link</label>
+                                <input type="url" id="dealLink" name="link" placeholder="https://merchant.com/product">
+                                <p class="form-help">Optional: Link to product page or merchant</p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="button" id="previewDeal" class="btn btn-outline">Preview Deal</button>
+                        <button type="submit" class="btn btn-primary">Create & Publish Deal</button>
+                    </div>
+                </form>
+
+                <!-- Preview Modal / Section -->
+                <div id="dealPreview" class="deal-preview" style="display: none;">
+                    <header class="preview-header">
+                        <h2>Deal Preview</h2>
+                        <button id="closePreview" class="btn btn-outline" type="button">Edit deal</button>
+                    </header>
+                    <article class="deal-card deal-preview-card">
+                        <div class="deal-card-header">
+                            <h2 id="previewTitle" class="deal-title">Your deal title here</h2>
+                            <span id="previewCategory" class="deal-badge">Category</span>
+                        </div>
+                        <img id="previewImage" class="deal-image" src="" alt="Product image" style="display: none;">
+                        <p id="previewDescription" class="deal-description">Your deal description...</p>
+                        <div class="deal-meta-row">
+                            <span class="deal-participants">
+                                <span id="previewJoined">0</span> /
+                                <span id="previewTarget">-</span> joined
+                            </span>
+                            <span id="previewPrice" class="deal-discount">Target price: $ -</span>
+                        </div>
+                        <div id="previewTimer" class="deal-timer">
+                            <span class="timer-value" data-timer="preview">-</span>
+                        </div>
+                        <a id="previewLink" href="#" class="btn btn-primary">View deal page</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo footer-logo">
+                    <span class="logo-mark">CWG</span>
+                    <span class="logo-text">CanWeGet<span class="logo-dot">.com</span></span>
+                </a>
+                <p class="footer-description">
+                    A simple way to turn group demand into better prices and smarter shopping, one deal at a time.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Connect</h3>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Visit CanWeGet on Facebook">Facebook</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on X (Twitter)">X</a></li>
+                    <li><a href="#" aria-label="Visit CanWeGet on Instagram">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© <span id="currentYear"></span> CanWeGet.com. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
